@@ -25,8 +25,38 @@ class HomeViewModel {
         }
     }
     
+    func topSer(completion: @escaping (Result<[Movie]?, Error>) -> Void) {
+        webService.topSeries { (result) in
+            switch result {
+            case .success(let response):
+                guard let movies = response.results else {
+                    completion(.success(nil))
+                    return
+                }
+                completion(.success(movies))
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
+        }
+    }
+    
     func getPopularMovies(completion: @escaping (Result<[Movie]?, Error>) -> Void) {
         webService.getPopularMovies { (result) in
+            switch result {
+            case .success(let response):
+                guard let movies = response.results else {
+                    completion(.success(nil))
+                    return
+                }
+                completion(.success(movies))
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
+        }
+    }
+    
+    func getPeople(completion: @escaping (Result<[Results]?, Error>) -> Void) {
+        webService.people { (result) in
             switch result {
             case .success(let response):
                 guard let movies = response.results else {

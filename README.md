@@ -20,6 +20,7 @@ Project was done in:
 * Imporvement on the UI design
 * Adding Comment and documentation to code
 * Organising project folder
+* Adding Fastlane for Continous Intergration
 
 
 #### SCREENSHOTS

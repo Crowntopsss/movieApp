@@ -7,7 +7,6 @@ Project was done in:
 * Xcode Version Version 12.4 
 * Swift 5
 * iOS Deployment target 14.1
-* Project start at 9:46 am and ended at 1:46pm
 
 #### Technical Details
 * Used MVVM
